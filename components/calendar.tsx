@@ -1,0 +1,31 @@
+import { useState, useCallback, useEffect } from 'react';
+import { Calendar, dateFnsLocalizer, Views } from 'react-big-calendar';
+import withDragAndDrop from "react-big-calendar/lib/addons/dragAndDrop";
+import { format } from 'date-fns/format';
+import { parse } from 'date-fns/parse';
+import { startOfWeek } from 'date-fns/startOfWeek';
+import { getDay } from 'date-fns/getDay';
+import { enUS } from 'date-fns/locale';
+import { useToast } from "@/components/ui/use-toast";
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { useRouter } from 'next/navigation';
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Calendar as CalendarIcon, Plus, Trash2, Clock, Users, Tag } from 'lucide-react';
+import { format as formatDate } from 'date-fns';
+import { cn } from "@/lib/utils";
+import { Calendar as CalendarComponent } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem } from "@/components/ui/command";
+import { Badge } from "@/components/ui/badge";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Check, ChevronsUpDown, X } from "lucide-react";
+import { Command as CommandPrimitive } from "cmdk";
+import { useDebounce } from '@/hooks/use-debounce';
+import { useSearchParams } from 'next/navigation';
+
+// ... rest of the file remains unchanged ... 
