@@ -2,6 +2,8 @@
 
 A comprehensive medical records management and AI-assisted healthcare application.
 
+The app is currently live, so start to take control of your family's health with [VitaLink](https://vitalink-gamma.vercel.app/)!
+
 ## Prerequisites
 
 - Node.js 18.x or later
